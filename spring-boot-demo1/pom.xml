@@ -25,30 +25,29 @@
 	</properties>
 
 	<dependencies>
+		<!-- 引入web依赖Web starter依赖引入，会增加web容器、springweb、springmvc、jackson-databind等相关的依赖。  -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		
+		<!-- 引入测试依赖 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- 引入web依赖Web starter依赖引入，会增加web容器、springweb、springmvc、jackson-databind等相关的依赖。  -->
+		
+		<!-- 他会默认查找src/main/resources/templates目录下面的文件 -->
 		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-web</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
-		<!-- 引入测试依赖 -->
-		<dependency>
-		    <groupId>org.springframework.boot</groupId>    
-		        <artifactId>spring-boot-starter-test</artifactId>
-		    <scope>test</scope>
-		</dependency>
+		
 	</dependencies>
 
 	<build>
+	<!-- 能够将Spring Boot应用打包为可执行的jar或war文件 -->
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
